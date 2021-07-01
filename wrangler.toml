@@ -1,0 +1,15 @@
+name = 'clouddown-e2e'
+type = 'javascript'
+account_id = 'aad5c82543cd1f267b89737d0f56405e'
+workers_dev = true
+
+kv_namespaces = [
+  { binding = "NAMESPACE", id = "a982ec78dcfd4cbbbf2a7125fe232322", preview_id = "1e6e3f28832f40638bdb956508aa1ca3" }
+]
+
+[build]
+command = 'yarn browserify ./e2e/index.ts -o ./dist/worker.js -t [ babelify --extensions .ts --presets [ @babel/preset-env @babel/preset-typescript ] --plugins [ @babel/plugin-proposal-class-properties ] ]'
+ 
+
+[build.upload]
+format = 'service-worker'

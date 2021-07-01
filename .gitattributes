@@ -1,0 +1,3 @@
+.pnp.js            binary linguist-generated
+.yarn/releases/**  binary linguist-vendored
+.yarn/**           linguist-vendored
